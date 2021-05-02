@@ -6,9 +6,9 @@ class Song < ApplicationRecord
     message: 'I think you are lying. Only prince could be that prolific...'
   }
 
-  validates :released, inclusion: { in: [true, false] }  
+  validates :released, inclusion: { in: [true, false] }
 
-  validates :artist_name, presence: true 
+  validates :artist_name, presence: true
 
     with_options if: :released? do |song|
     song.validates :release_year, presence: true
