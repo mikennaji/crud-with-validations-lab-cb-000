@@ -18,6 +18,3 @@ class Song < ApplicationRecord
     released
   end
 end
-
-
-
