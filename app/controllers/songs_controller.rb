@@ -13,6 +13,9 @@ class SongsController < ApplicationController
       render :new
     end
   end
-   
 
+
+  def song_params(*args)
+    params.require(:song).permit(*args) 
+ end 
 end
